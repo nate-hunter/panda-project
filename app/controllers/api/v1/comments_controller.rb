@@ -1,18 +1,37 @@
 class Api::V1::CommentsController < ApplicationController
   def index
-<<<<<<< HEAD
-
-=======
     @comments = Comment.all
     render json: @comments
->>>>>>> 387b03ac18b1afabe2f3d7d2fbe0c5fadadf389f
-
   end
 
   def create
-    @comment = Comment.create(comment_params)
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      render json: @comment
+    else
+      render json: {status: 'ERROR', message: 'A new comment was not able to be created', data: @comment.errors}, status: :unproccessable_entity
+    end
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
     render json: @comment
   end
+
+  def update
+    @comment.find(params[:id])
+    if quote.update
+      render json: @comment
+    else
+      render json: {status: 'ERROR', message: 'Comment not updated', data: @comment.errors}, status: :unproccessable_entity
+    end
+  end
+
+  def delete
+  @comment = Comment.find(params[:id])
+  @comment.destroy
+  render json: {status: 'SUCCESS', message: 'Comment successfully deleted', data: @comment}, status: :ok
+end
 
 private
 
