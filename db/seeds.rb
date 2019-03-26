@@ -1,11 +1,11 @@
 Gif.destroy_all
 
-Gif.create(name: "Pear", img_url: "https://media.giphy.com/media/IU5ApmC4e6wEw/giphy.gif", likes: 0)
-Gif.create(name: "Papa Bear", img_url: "https://media.giphy.com/media/qcDRY6uc5iHvi/giphy.gif", likes: 0)
-Gif.create(name: "French Fry", img_url: "https://i.imgur.com/j4IpoPU.gif", likes: 0)
-Gif.create(name: "Lobo Dos", img_url: "https://i.imgur.com/uwtyrdw.gif", likes: 0)
-Gif.create(name: "Oso", img_url: "https://media1.tenor.com/images/ad17cb8e70fd8c448b0d66902e56b7fc/tenor.gif?itemid=5409772", likes: 0)
-Gif.create(name: "Boogie Bear", img_url: "https://media.giphy.com/media/AzOZN4iVPxHs4/giphy.gif", likes: 0)
+Gif.create(name: "Pear", img_url: "https://media.giphy.com/media/IU5ApmC4e6wEw/giphy.gif", music: "dancing_panda-3.mp3", likes: 0)
+Gif.create(name: "Papa Bear", img_url: "https://media.giphy.com/media/qcDRY6uc5iHvi/giphy.gif", music: "pandas-oos.mp3", likes: 0)
+Gif.create(name: "French Fry", img_url: "https://i.imgur.com/j4IpoPU.gif", music: "dancing_panda-2.mp3", likes: 0)
+Gif.create(name: "Lobo Dos", img_url: "https://i.imgur.com/uwtyrdw.gif", music: "dancing_panda.mp3", likes: 0)
+Gif.create(name: "Oso", img_url: "https://media1.tenor.com/images/ad17cb8e70fd8c448b0d66902e56b7fc/tenor.gif?itemid=5409772", music: "objects-sway.mp3", likes: 0)
+Gif.create(name: "Boogie Bear", img_url: "https://media.giphy.com/media/AzOZN4iVPxHs4/giphy.gif", music: "knickerbocker.mp3", likes: 0)
 
 Gif.create(name: Faker::Dessert.topping, img_url: "https://i.imgur.com/7u8qDoH.gif?noredirect", likes: 0)
 Gif.create(name: Faker::Dessert.topping, img_url: "https://3.bp.blogspot.com/-Xh6J30tAYIM/WjUnSThwVzI/AAAAAAAPZiM/cIL2cS6ZvpwIw9b9rhEEPgoTGeFzFx3HgCLcBGAs/s1600/AW683364_05.gif", likes: 0)
