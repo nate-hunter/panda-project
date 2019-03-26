@@ -28,15 +28,14 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def delete
-  @comment = Comment.find(params[:id])
-  @comment.destroy
-  render json: {status: 'SUCCESS', message: 'Comment successfully deleted', data: @comment}, status: :ok
-end
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    render json: {status: 'SUCCESS', message: 'Comment successfully deleted', data: @comment}, status: :ok
+  end
 
-private
+  private
 
-def comment_params
-  params.permit(:name, :comment)
-end
-
+  def comment_params
+    params.permit(:name, :comment)
+  end
 end
