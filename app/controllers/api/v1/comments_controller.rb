@@ -36,6 +36,6 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.permit(:name, :comment)
+    params.permit(:gif_id, :name, :comment)
   end
 end
