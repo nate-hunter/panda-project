@@ -20,7 +20,7 @@ class Api::V1::CommentsController < ApplicationController
 
   def update
     @comment.find(params[:id])
-    if quote.update
+    if @comment.update
       render json: @comment
     else
       render json: {status: 'ERROR', message: 'Comment not updated', data: @comment.errors}, status: :unproccessable_entity
